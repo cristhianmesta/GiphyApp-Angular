@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center border-bottom border-2 fw-bold text-secondary">
+    ***** ULTIMAS BÚSQUEAS *****
+</div>
+<div class="d-flex justify-content-center mt-2 mb-2">
+    <div  *ngIf="recents.length>0; else Nothing"
+          class="btn-group" 
+          role="group" 
+          aria-label="Basic example">
+        <button *ngFor="let recent of recents;"
+                type="button" 
+                class="btn btn-outline-secondary btn-sm">{{ recent | uppercase}}</button>
+    </div>
+    <ng-template #Nothing>
+        Ningún elemento en la búsquda :(
+    </ng-template>
+    
+</div>
