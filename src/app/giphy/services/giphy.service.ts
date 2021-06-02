@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Giph, ResultGiphyInterface } from '../interfaces/giphy.interface';
+import { Giph, ResultGiphyInterface } from '../interfaces/gifs.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class GiphyService {
   private apiKey : string = "8WC1k0nyo0g8ws4zVvnSDoDO5WGVCBAw";
   private _recents : string[] = [];
 
-  results : Giph[] = [];
+  public results : Giph[] = [];
 
   get recents(){
     return [...this._recents];
