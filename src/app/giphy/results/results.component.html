@@ -1,10 +1,8 @@
-<div class="">
+<div class="results">
       <div *ngFor="let item of results"
-          class="card float-start animate__animated  animate__fadeIn"  
-          style="width: 18rem;">
+          class="item">
         <img [src]="item.images.fixed_height_small.url"
-             [alt]="item"
-             class="rounded">
+             [alt]="item">
       </div>
 </div>
 
